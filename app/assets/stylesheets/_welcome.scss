@@ -1,3 +1,37 @@
 .welcome-video{
   width: 70%;
 }
+
+[data-controller="video"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: black;
+
+  video {
+    width: auto;
+    height: 100svh;
+  }
+}
+.video-container{
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+  .play-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 20px 40px;
+    cursor: pointer;
+  }
