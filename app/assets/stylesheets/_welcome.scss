@@ -6,12 +6,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: black;
+  height: 100svh;
+  background: white;
 
   video {
-    width: auto;
-    height: 100svh;
+    width: 100%;
+    height: auto;
   }
 }
 .video-container{
