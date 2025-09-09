@@ -19,7 +19,7 @@ import { Controller } from "@hotwired/stimulus"
 //         this.frameTarget.webkitEnterFullscreen()
 //       }
 //     })
-//   }
+// }
 
 //   connect() {
 //     this.buttonTarget.addEventListener( "click", () => this.play() );
@@ -37,9 +37,16 @@ export default class extends Controller {
     this.frameTarget.muted = false;
     this.frameTarget.currentTime = 0;
 
-    this.frameTarget.play().catch(err => {
-      console.log("Playback prevented:", err);
-    });
+    // this.frameTarget.play().catch(err => {
+    //   console.log("Playback prevented:", err);
+    // });
+        this.frameTarget.play().then(() => {
+      if (this.frameTarget.requestFullscreen) {
+        this.frameTarget.requestFullscreen()
+      } else if (this.frameTarget.webkitEnterFullscreen) {
+        this.frameTarget.webkitEnterFullscreen()
+      }
+    })
   }
 
   connect() {
