@@ -1,12 +1,15 @@
-
 <div data-controller="video" class="video-container">
+  <div class="">
+    <div class="heading-welcome-video" data-video-target="heading">Have you received your bonfluencer bracelet yet?</div>
+  </div>
   <video class="welcome-video" data-video-target="frame"
   playsinline
   webkit-playsinline
   muted
   preload="auto">
     <source src="/videos/welcome_video_big.mp4" type="video/mp4">
-    Your browser does not support the video tag.
+    Your browser does not support this video, sorry :(
   </video>
-  <button data-video-target="button" class="play-overlay">▶ Play video</button>
+  <button data-video-target="button" class="play-overlay">Yes</button>
+  <a href="https://bonfluencer.com" data-video-target="linkButton" class="no-website-link">No</a>
 </div>

@@ -27,10 +27,12 @@ import { Controller } from "@hotwired/stimulus"
 // }
 
 export default class extends Controller {
-  static targets = ["button", "frame"]
+  static targets = ["button", "frame", "heading", "linkButton"]
 
   play() {
     this.buttonTarget.style.display = "none";
+    this.linkButtonTarget.style.display = "none";
+    this.headingTarget.style.display = "none";
     this.frameTarget.style.display = "block";
 
     this.frameTarget.controls = true;
